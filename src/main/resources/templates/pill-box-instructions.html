@@ -2,13 +2,27 @@
 <html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Instructions du pilulier</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <th:block th:include="fragments/header.html :: header"></th:block>
 <main>
-
+<h1>Mon Pilulier</h1>
+    <h3>Mon médicament</h3>
+    <div>
+        <img src="image/pilule.png" alt="image de pilule">
+    </div>
+    <h3>Posologie</h3>
+        <p>3</p>
+    <h3>Le ou les cases du pilulier à remplir</h3>
+        <p>Jours : </p>
+        <p>Tous les jours</p>
+        <p>Période de la journée :</p>
+        <p>Matin, midi et soir</p>
+        <label for="addMedic">Cliquez-ici quand vous avez rempli votre pilulier</label>
+        <input type="checkbox" id="addMedic" name="addMedic">
 </main>
 <th:block th:include="fragments/footer.html :: footer"></th:block>
 </body>
