@@ -74,3 +74,14 @@ body {
     font-size: 2.5rem;
     font-family: 'Montserrat', sans-serif;
 }
+
+
+@media screen and (max-width: 768px) {
+
+    .mainIndexBlock {
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+
