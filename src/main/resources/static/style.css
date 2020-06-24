@@ -3,7 +3,9 @@
 }
 
 body {
-    background-color: lightcyan; /* TODO: choose the right color. */
+    background-image: url("/image/fond_doctolib.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .mainIndexBlock {
@@ -15,7 +17,7 @@ body {
 
 .menuBox {
     padding: 3rem;
-    background-color: aquamarine; /*TODO: choose the right color*/
+    background-color: yellow;        /*TODO: choose the right color*/
     border-radius: 25px;
     width: 180px;
 }
