@@ -8,4 +8,8 @@ public class MainController {
 
     @GetMapping("/")
     public String getIndex() { return "index"; }
+
+    @GetMapping("/pill-box")
+    public String getPillBox() { return "pill-box"; }
+
 }
