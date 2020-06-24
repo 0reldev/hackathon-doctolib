@@ -17,7 +17,17 @@ body {
 
 .menuBox {
     padding: 3rem;
-    background-color: yellow;        /*TODO: choose the right color*/
+    background-color: gold;
     border-radius: 25px;
     width: 180px;
+}
+
+.menuBox:hover {
+    background-color: yellow;
+}
+
+.menuLink {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
