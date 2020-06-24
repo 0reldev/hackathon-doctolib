@@ -14,4 +14,8 @@ public class MainController {
 
         return "pill-box-instructions";
     }
+
+    @GetMapping("/pill-box")
+    public String getPillBox() { return "pill-box"; }
+
 }
