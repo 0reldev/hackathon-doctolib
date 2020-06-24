@@ -31,3 +31,46 @@ body {
     color: black;
     font-weight: bold;
 }
+
+/*****************************************NAVBAR*******************************************************/
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #0697de;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: #0697de;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #0697de;
+    color: white;
+    font-size: 3rem;
+}
+
+.topnav .active {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-left: 0.4rem;
+}
+
+.topnav a.patient {
+    margin-left: 35rem;
+    padding-top: 1.3rem;
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
