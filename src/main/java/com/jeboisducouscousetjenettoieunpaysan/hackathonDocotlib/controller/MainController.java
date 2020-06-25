@@ -32,6 +32,7 @@ public class MainController {
     public String getDrugs(Model out) {
 
         out.addAttribute("drugs", drugRepository.findAllMorningDrugs());
+        out.addAttribute("drugsMidday", drugRepository.findAllMiddayDrugs());
         out.addAttribute("drugsNight", drugRepository.findAllNightDrugs());
 
         return "pill-box-details";
