@@ -1,0 +1,15 @@
+@import "style.css";
+@import "style.css";
+
+.pillBoxButton {
+    background-color: gold;
+    border-radius: 25px;
+}
+
+#button {
+    font-size: 2rem;
+}
+
+.tablepillbox {
+    margin-top: 3rem;
+}
