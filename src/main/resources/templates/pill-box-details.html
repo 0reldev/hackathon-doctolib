@@ -105,25 +105,13 @@
                                  </tr>
                            </thead>
                            <tbody>
-                            <tr>
-                                <td>Somnifère</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
-                            </tr>
-                            <tr>
-                                <td>Piqûre</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>4 x 500 mg</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
-                            </tr>
-                            <tr>
-                                <td>Pommade</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
-                            </tr>
-                            </tbody>
+                                <tr th:each="drug : ${drugsIfNecessary}">
+                                    <td th:text="${drug.name}"></td>
+                                    <td><img  class="drugPhoto" th:src="${drug.image}"></td>
+                                    <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
+                                    <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
+                                </tr>
+                           </tbody>
                         </table>
                     </td>
                 </tr>
