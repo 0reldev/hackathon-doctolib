@@ -35,6 +35,10 @@ public class MainController {
         out.addAttribute("drugs", drugRepository.findAllMorningDrugs());
         out.addAttribute("images", drugRepository.findAllMorningDrugsImages());
 
+        out.addAttribute("namesNight", drugRepository.findAllNightDrugsNames());
+        out.addAttribute("drugsNight", drugRepository.findAllNightDrugs());
+        out.addAttribute("imagesNight", drugRepository.findAllNightDrugsImages());
+
         return "pill-box-details";
     }
 }
