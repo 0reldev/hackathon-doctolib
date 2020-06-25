@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Entity
+@Table (name = "pillbox")
 public class Pillbox {
 
     @Id

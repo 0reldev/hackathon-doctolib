@@ -39,13 +39,13 @@
                             <tbody>
                                 <tr>
                                     <td>Doliprane</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
+                                    <td><img  class="doli" th:src="@{image/drugs/{image}(image= ${drugs.getImage})}"></td>
                                     <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
                                 </tr>
                                 <tr>
-                                    <td>Eferalgan</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
+                                    <td>Efferalgan</td> <!-- TODO: make it dynamic with Hibernate -->
+                                    <td><img class="efferalgan" src="/image/drugs/efferalgan.jpg" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td>4 x 500 mg</td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
                                 </tr>
