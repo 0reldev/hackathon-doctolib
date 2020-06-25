@@ -18,4 +18,10 @@ public class MainController {
     @GetMapping("/pill-box")
     public String getPillBox() { return "pill-box"; }
 
+    @GetMapping("/pill-box-details")
+    public String getPillBoxDetails() {
+
+        return "pill-box-details";
+    }
+
 }
