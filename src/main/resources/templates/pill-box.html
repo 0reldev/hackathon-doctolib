@@ -3,27 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/68562b10c3.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"/>
     <title>Pilulier</title>
+    <link rel="stylesheet" href="/pill-box.css">
     <link rel="stylesheet" href="/style.css">
+
 </head>
 <body>
 <th:block th:include="fragments/header.html :: header"></th:block>
 <main>
-    <h1>Mon Pilulier</h1>
-        <div>
-            <a href="/">Cliquez ici pour afficher le pilulier</a>
+    <h1 class="center-align white-text">Mon Pilulier</h1>
+        <div class="pillboxD">
+            <a #button class="waves-effect waves-light btn-large red">Cliquez-ici pour voir votre pilulier en détail<i class="fas fa-capsules right"></i></a>
+            <a class="pillLink" href="/pill-box-details"><div class="pillBoxButton">.</div></a>
         </div>
         <div>
-            <p>La composition de votre pilulier pour :</p>
-            <p>Lundi, mardi</p>
+            <p>Composition de votre pilulier :</p><br>
+            <p>Lundi midi</p>
         </div>
-        <div>
-            <p>Médicaments</p>
-        </div>
-    <div>
-        <p>Posologie</p>
-    </div>
+            <table class="tablepillbox">
+            <thead>
+            <tr>
+                <th>Médicaments</th>
+                <th>Posologie</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Allergodil</td>
+                <td>1 Spray par narine quand vous en ressentez le besoin</td>
+            </tr>
+            <tr>
+                <td>Bilaska</td>
+                <td>1 Comprimé le matin 1h avant le petit déjeuner ou 2h après (ou au coucher)</td>
+            </tr>
+            <tr>
+                <td>Bricanyl</td>
+                <td>1 inhalation quand vous en ressentez le besoin</td>
+            </tr>
+            <tr>
+                <td>Montelukast</td>
+                <td>1 comprimé le matin</td>
+            </tr>
+            </tbody>
+        </table>
 </main>
 <th:block th:include="fragments/footer.html :: footer"></th:block>
 </body>
