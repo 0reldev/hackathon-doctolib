@@ -40,4 +40,12 @@
     border-bottom: 1px solid #fff;
 }
 
+/*Mobile*/
+
+@media screen and (max-width: 768px) {
+
+    .topnav {
+        background-image: url("/image/bkg-mobile.png");
+    }
+}
 /*END TOPNAV*/

@@ -13,7 +13,7 @@
 }
 
 .menuBox {
-    padding: 3rem;
+    padding: 1rem;
     background-color: gold;
     border-radius: 25px;
     width: 180px;
@@ -35,5 +35,19 @@
 
 .menuBox:hover {
     box-shadow: 0px 0px 23px 2px rgba(0,0,0,0.75);
+}
+
+/*Mobile*/
+
+@media screen and (max-width: 768px) {
+
+    .mainIndexBlock ul {
+        flex-direction: column;
+        height: min-content;
+    }
+
+    .menuBox {
+        margin: 1rem auto;
+    }
 }
 /*End index*/
