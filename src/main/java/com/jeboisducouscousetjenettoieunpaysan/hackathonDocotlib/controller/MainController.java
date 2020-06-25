@@ -27,15 +27,14 @@ public class MainController {
     @GetMapping("/pill-box")
     public String getPillBox() { return "pill-box"; }
 
-    @GetMapping("/pill-box-details")
+/*    @GetMapping("/pill-box-details")
     public String getPillBoxDetails() {
 
         return "pill-box-details";
-    }
+    }*/
 
-    @GetMapping("/pill-box-image")
-    public String showImageDrugs(Model out,
-                                 @PathVariable String image) {
+    @GetMapping("/pill-box-details")
+    public String getDrugs(Model out) {
 
         out.addAttribute("drugs" , drugRepository.findAll());
 

@@ -37,24 +37,24 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Doliprane</td> <!-- TODO: make it dynamic with Hibernate -->
+                                <tr th:each="drug : ${drugs}">
+                                    <td th:text="${drug.name}">Doliprane</td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td><img  class="doli" ><!--th:src="|${image}(image= ${drugs.image})}">--></td>
                                     <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
                                 </tr>
-                                <tr>
-                                    <td>Efferalgan</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td><img class="efferalgan" src="/image/drugs/efferalgan.jpg" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td>4 x 500 mg</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
+                                <!--<tr>
+                                    <td>Efferalgan</td> &lt;!&ndash; TODO: make it dynamic with Hibernate &ndash;&gt;
+                                    <td><img class="efferalgan" src="/image/drugs/efferalgan.jpg" alt="photo"></td> &lt;!&ndash; TODO: make it dynamic with Hibernate &ndash;&gt;
+                                    <td>4 x 500 mg</td> &lt;!&ndash; TODO: make it dynamic with Hibernate &ndash;&gt;
+                                    <td>non</td> &lt;!&ndash; TODO: make it dynamic with Hibernate &ndash;&gt;
                                 </tr>
                                 <tr>
-                                    <td>Xanax</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td>2</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
-                                </tr>
+                                    <td>Xanax</td> &lt;!&ndash; TODO: make it dynamic with Hibernate &ndash;&gt;
+                                    <td><img src="" alt="photo"></td> &lt;!&ndash; TODO: make it dynamic with Hibernate &ndash;&gt;
+                                    <td>2</td> &lt;!&ndash; TODO: make it dynamic with Hibernate &ndash;&gt;
+                                    <td>non</td> &lt;!&ndash; TODO: make it dynamic with Hibernate &ndash;&gt;
+                                </tr>-->
                             </tbody>
                         </table>
                     </td>
