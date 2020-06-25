@@ -13,34 +13,6 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
 
     List<Drug> findAll();
 
-    @Query(value = "SELECT drug.name " +
-            "FROM drug " +
-            "LEFT JOIN composition " +
-            "ON drug.id = composition.id_drug " +
-            "LEFT JOIN pillbox " +
-            "ON pillbox.id = composition.id_pillbox " +
-            "LEFT JOIN patient " +
-            "ON patient.id = pillbox.id_patient " +
-            "WHERE composition.time_of_the_day = 'matin' "+
-            "AND patient.id = 1 " +
-            "AND composition.day = 'Lundi'",
-            nativeQuery = true)
-    List<String> findAllMorningDrugsNames();
-
-    @Query(value = "SELECT drug.image " +
-            "FROM drug " +
-            "LEFT JOIN composition " +
-            "ON drug.id = composition.id_drug " +
-            "LEFT JOIN pillbox " +
-            "ON pillbox.id = composition.id_pillbox " +
-            "LEFT JOIN patient " +
-            "ON patient.id = pillbox.id_patient " +
-            "WHERE composition.time_of_the_day = 'matin' " +
-            "AND patient.id = 1 " +
-            "AND composition.day = 'Lundi' ",
-            nativeQuery = true)
-    List<String> findAllMorningDrugsImages();
-
     @Query(value = "SELECT * " +
             "FROM drug " +
             "LEFT JOIN composition " +
@@ -68,34 +40,6 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
             "AND composition.day = 'Lundi' ",
             nativeQuery = true)
     List<Drug> findAllMiddayDrugs();
-
-    @Query(value = "SELECT drug.image " +
-            "FROM drug " +
-            "LEFT JOIN composition " +
-            "ON drug.id = composition.id_drug " +
-            "LEFT JOIN pillbox " +
-            "ON pillbox.id = composition.id_pillbox " +
-            "LEFT JOIN patient " +
-            "ON patient.id = pillbox.id_patient " +
-            "WHERE composition.time_of_the_day = 'midi' " +
-            "AND patient.id = 1 " +
-            "AND composition.day = 'Lundi' ",
-            nativeQuery = true)
-    List<String> findAllMMiddayDrugsImages();
-
-    @Query(value = "SELECT drug.name " +
-            "FROM drug " +
-            "LEFT JOIN composition " +
-            "ON drug.id = composition.id_drug " +
-            "LEFT JOIN pillbox " +
-            "ON pillbox.id = composition.id_pillbox " +
-            "LEFT JOIN patient " +
-            "ON patient.id = pillbox.id_patient " +
-            "WHERE composition.time_of_the_day = 'midi' "+
-            "AND patient.id = 1 " +
-            "AND composition.day = 'Lundi'",
-            nativeQuery = true)
-    List<String> findAllMiddayDrugsNames();
 
 
 }
