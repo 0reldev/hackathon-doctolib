@@ -1,7 +1,6 @@
 package com.jeboisducouscousetjenettoieunpaysan.hackathonDocotlib.repository;
 
 import com.jeboisducouscousetjenettoieunpaysan.hackathonDocotlib.entity.Drug;
-import org.hibernate.cache.spi.entry.StructuredCacheEntry;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -41,5 +40,17 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
             nativeQuery = true)
     List<Drug> findAllMiddayDrugs();
 
-
+      @Query(value = "SELECT * " +
+            "FROM drug " +
+            "LEFT JOIN composition " +
+            "ON drug.id = composition.id_drug " +
+            "LEFT JOIN pillbox " +
+            "ON pillbox.id = composition.id_pillbox " +
+            "LEFT JOIN patient " +
+            "ON patient.id = pillbox.id_patient " +
+            "WHERE composition.time_of_the_day = 'avant le couché' " +
+            "AND patient.id = 1 " +
+            "AND composition.day = 'Lundi' ",
+            nativeQuery = true)
+    List<Drug> findAllNightDrugs();
 }

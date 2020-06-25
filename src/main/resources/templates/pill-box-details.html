@@ -37,7 +37,7 @@
                             </thead>
                             <tbody>
                                 <tr th:each="drug : ${drugs}">
-                                    <td th:text="${drug.name}">Doliprane</td>
+                                    <td th:text="${drug.name}"></td>
                                     <td><img  class="drugPhoto" th:src="${drug.image}"></td>
                                     <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
@@ -82,21 +82,9 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Dafalgan</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
-                            </tr>
-                            <tr>
-                                <td>Pillule contraceptive</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>4 x 500 mg</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
-                            </tr>
-                            <tr>
-                                <td>Bain de bouche</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td><img src="" alt="photo"></td> <!-- TODO: make it dynamic with Hibernate -->
+                            <tr th:each="drug : ${drugsNight}">
+                                <td th:text="${drug.name}"></td>
+                                <td><img  class="drugPhoto" th:src="${drug.image}"></td>
                                 <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
                                 <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
                             </tr>
