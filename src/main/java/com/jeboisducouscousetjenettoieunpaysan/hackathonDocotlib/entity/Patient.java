@@ -1,10 +1,12 @@
 package com.jeboisducouscousetjenettoieunpaysan.hackathonDocotlib.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
+@Table (name = "patient")
 public class Patient {
 
     @Id
@@ -20,6 +22,9 @@ public class Patient {
 
     private String city;
     private Date birthday;
+
+    @OneToMany(mappedBy = "patient")
+    private List<Pillbox> pillboxes;
 
     @ManyToMany
     @JoinTable (name = "patient_doctor",
@@ -96,5 +101,13 @@ public class Patient {
 
     public void setDoctors(List<Doctor> doctors) {
         this.doctors = doctors;
+    }
+
+    public List<Pillbox> getPillboxes() {
+        return pillboxes;
+    }
+
+    public void setPillboxes(List<Pillbox> pillboxes) {
+        this.pillboxes = pillboxes;
     }
 }
