@@ -32,4 +32,13 @@ public class MainController {
 
         return "pill-box-details";
     }
+
+    @GetMapping("/pill-box-image")
+    public String showImageDrugs(Model out,
+                                 @PathVariable String image) {
+
+        out.addAttribute("drugs" , drugRepository.findAll());
+
+        return "pill-box-details";
+    }
 }

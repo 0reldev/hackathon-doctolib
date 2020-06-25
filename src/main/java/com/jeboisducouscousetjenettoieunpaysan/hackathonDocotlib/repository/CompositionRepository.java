@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CompositionRepository extends JpaRepository<Composition, Long> {
 
-
 }
