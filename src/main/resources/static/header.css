@@ -1,0 +1,43 @@
+/*START TOPNAV*/
+
+.topnav {
+    height: 50vh;
+    background-image: url("/image/bkg.png");
+    background-size: cover;
+    background-position: bottom;
+}
+
+.topnav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.topnav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topnav-link a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+
+.patient {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+}
+
+/* Animations */
+.topnav-link a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+/*END TOPNAV*/

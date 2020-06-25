@@ -10,8 +10,18 @@
 <body>
 <th:block th:include="fragments/header.html :: header"></th:block>
 <main class="mainIndexBlock">
-    <a class="menuLink" href="/pill-box-instructions"><div class="menuBox">REMPLIR MON PILULIER</div></a>
-    <a class="menuLink" href="/pill-box"><div class="menuBox">CONSULTER MON PILULIER</div></a>
+    <ul>
+        <li class="menulink">
+            <a class="menuLink" href="/pill-box-instructions">
+            <div class="menuBox">REMPLIR MON PILULIER</div>
+            </a>
+        </li>
+        <li class="menulink">
+            <a class="menuLink" href="/pill-box">
+                <div class="menuBox">CONSULTER MON PILULIER</div>
+            </a>
+        </li>
+    </ul>
 </main>
 <th:block th:include="fragments/footer.html :: footer"></th:block>
 </body>
