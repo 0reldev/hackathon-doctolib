@@ -39,7 +39,7 @@
                             <tbody>
                                 <tr th:each="drug : ${drugs}">
                                     <td th:text="${drug.name}">Doliprane</td>
-                                    <td><img  class="doli" ><!--th:src="|${image}(image= ${drugs.image})}">--></td>
+                                    <td><img  class="doli" th:src="${drug.image}"></td>
                                     <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
                                 </tr>
