@@ -10,20 +10,30 @@
 <body>
 <th:block th:include="fragments/header.html :: header"></th:block>
 <main>
-<h1>Mon Pilulier</h1>
-    <h3>Mon médicament</h3>
-    <div>
-        <img src="image/pilule.png" alt="image de pilule">
+<h1 class="step-title">Etape pour remplir votre Pilulier</h1>
+    <div class="container-step">
+        <div class="step">
+            <div class="grid-left">
+                <h3 class="grid-left-top">La Pilule :</h3>
+                <img class="grid-left-bottom" src="image/pilule.png" alt="image de pilule">
+            </div>
+            <div class="grid-middle">
+                <h3 class="grid-middle-top">Le nombre :</h3>
+                <p class="grid-middle-bottom">3</p>
+            </div>
+            <div class="grid-right">
+                <h3 class="grid-right-top">La case :</h3>
+                <div class="grid-right-bottom">
+                    <p>Lundi</p>
+                    <p>Matin</p>
+                </div>
+            </div>
+        </div>
+        <form action="/" method="get" class="form-addMedic">
+            <input class="form-addMedic-button-back" type="button" name="back" value="Etape précédente">
+            <input class="form-addMedic-button-next" type="button" name="next" value="Etape suivante">
+        </form>
     </div>
-    <h3>Posologie</h3>
-        <p>3</p>
-    <h3>Le ou les cases du pilulier à remplir</h3>
-        <p>Jours : </p>
-        <p>Tous les jours</p>
-        <p>Période de la journée :</p>
-        <p>Matin, midi et soir</p>
-        <label for="addMedic">Cliquez-ici quand vous avez rempli votre pilulier</label>
-        <input type="checkbox" id="addMedic" name="addMedic">
 </main>
 <th:block th:include="fragments/footer.html :: footer"></th:block>
 </body>

@@ -1,0 +1,146 @@
+/*Start pill box instructions*/
+
+.step-title {
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+    color: #454545;
+}
+
+.step {
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25vh;
+    grid-gap: 1rem 1rem;
+    grid-template-areas: "grid-left grid-middle grid-right";
+}
+
+.step h3 {
+    font-size: 2rem;
+    color: #454545;
+}
+
+.step img {
+    max-width: 100px;
+    max-height: 100px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.grid-left {
+    grid-area: grid-left;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-gap: 1rem 1rem;
+    grid-template-areas: "grid-left-top" "grid-left-bottom";
+    place-items: center;
+}
+
+.grid-left-top {
+    grid-area: grid-left-top;
+}
+
+.grid-left-bottom {
+    grid-area: grid-left-bottom;
+    object-position: center;
+    object-fit: cover;
+}
+
+.grid-middle {
+    grid-area: grid-middle;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-gap: 1rem 1rem;
+    grid-template-areas: "grid-middle-top" "grid-middle-bottom";
+    place-items: center;
+}
+
+.grid-middle-top {
+    grid-area: grid-middle-top;
+}
+
+.grid-middle-bottom {
+    grid-area: grid-middle-bottom;
+    font-size: 3rem;
+}
+
+.grid-right {
+    grid-area: grid-right;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-gap: 1rem 1rem;
+    grid-template-areas: "grid-right-top" "grid-right-bottom";
+    place-items: center;
+}
+
+.grid-right-top {
+    grid-area: grid-right-top;
+    text-align: center;
+}
+
+.grid-right-bottom {
+    grid-area: grid-right-bottom;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 2rem;
+}
+
+.form-addMedic {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-addMedic-button-back {
+    margin: 1rem;
+    width: 250px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: gold;
+    border: none;
+    border-radius: 25px;
+    transition: box-shadow 1s;
+}
+
+.form-addMedic-button-next {
+    margin: 1rem;
+    width: 250px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background-color: #22dd22;
+    border: none;
+    border-radius: 25px;
+    transition: box-shadow 1s;
+}
+
+/*Animations*/
+
+.form-addMedic-button-back:hover {
+    box-shadow: 0px 0px 23px 2px rgba(0,0,0,0.75);
+}
+
+.form-addMedic-button-next:hover {
+    box-shadow: 0px 0px 23px 2px rgba(0,0,0,0.75);
+}
+
+/*Mobile*/
+
+@media screen and (max-width: 768px) {
+
+    .step {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 1rem 1rem;
+        grid-template-areas: "grid-left" "grid-middle" "grid-right";
+    }
+
+    .form-addMedic {
+        flex-direction: column;
+    }
+}
+/*End pill box instructions*/

@@ -3,11 +3,13 @@
 .topnav {
     height: 50vh;
     background-image: url("/image/bkg.png");
-    background-size: cover;
     background-position: bottom;
+    background-size: cover;
 }
 
 .topnav ul {
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 1rem;
@@ -35,17 +37,57 @@
     font-size: 2.5rem;
 }
 
+.bkg-left {
+    display: none;
+}
+
+.bkg-right {
+    display: none;
+}
+
 /* Animations */
 .topnav-link a:hover {
     border-bottom: 1px solid #fff;
 }
 
 /*Mobile*/
+@media screen and (max-width: 1125px) {
+
+    .topnav {
+        display: flex;
+        position: relative;
+        background-image: none;
+    }
+
+    .bkg-left {
+        display: block;
+        width: 50%;
+        background-image: url(/image/bkg-left.png);
+        background-size: cover;
+        background-position: 0% 100%;
+    }
+
+    .bkg-right {
+        display: block;
+        width: 50%;
+        background-image: url(/image/bkg-right.png);
+        background-size: cover;
+        background-position: 100% 100%;
+    }
+}
 
 @media screen and (max-width: 768px) {
 
     .topnav {
         background-image: url("/image/bkg-mobile.png");
+    }
+
+    .bkg-left {
+        display: none;
+    }
+
+    .bkg-right {
+        display: none;
     }
 }
 /*END TOPNAV*/

@@ -1,9 +1,13 @@
 @import "header.css";
 @import "index.css";
+@import "pill-box-instructions.css";
 
 * {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: 0;
 }
 
