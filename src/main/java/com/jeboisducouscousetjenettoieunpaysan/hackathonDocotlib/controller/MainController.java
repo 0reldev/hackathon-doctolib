@@ -31,7 +31,9 @@ public class MainController {
     @GetMapping("/pill-box-details")
     public String getDrugs(Model out) {
 
-        out.addAttribute("names", drugRepository.findAllMorningDrugs());
+        out.addAttribute("names", drugRepository.findAllMorningDrugsNames());
+        out.addAttribute("drugs", drugRepository.findAllMorningDrugs());
+        out.addAttribute("images", drugRepository.findAllMorningDrugsImages());
 
         return "pill-box-details";
     }
