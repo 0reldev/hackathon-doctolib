@@ -4,3 +4,11 @@
 .responsive-table thead tr th{
     width: 20%;
 }
+
+.centered thead tr th{
+    font-size: 2rem;
+}
+
+.centered tbody tr th{
+    font-size: 2rem;
+}
