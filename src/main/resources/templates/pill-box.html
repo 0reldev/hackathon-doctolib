@@ -18,9 +18,8 @@
     <h1 class="center-align black-text">Mon Pilulier</h1>
         <div class="pillboxD">
             <a class="waves-effect waves-light btn-large red" href="/pill-box-details">Cliquez-ici pour voir votre pilulier en détail<i class="fas fa-capsules right"></i></a>
-         <div>
-            <p>Composition de votre pilulier :</p><br>
-<!--            <p>Lundi midi</p>-->
+         <div class="sous-titre">
+            <p>Composition de votre pilulier d'aujourd'hui :</p><br>
           </div>
           </div> 
             <table class="tablepillbox">
@@ -31,21 +30,9 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Allergodil</td>
-                <td>1 Spray par narine quand vous en ressentez le besoin</td>
-            </tr>
-            <tr>
-                <td>Bilaska</td>
-                <td>1 Comprimé le matin 1h avant le petit déjeuner ou 2h après (ou au coucher)</td>
-            </tr>
-            <tr>
-                <td>Bricanyl</td>
-                <td>1 inhalation quand vous en ressentez le besoin</td>
-            </tr>
-            <tr>
-                <td>Montelukast</td>
-                <td>1 comprimé le matin</td>
+            <tr th:each="composition :${compositions}">
+                <td th:text="${composition.getDrug().getName()}"></td>
+                 <td th:text="|${composition.getQuantity()} comprimés le ${composition.getDay()} ${composition.getTimeOfTheDay()}|"></td>
             </tr>
             </tbody>
         </table>

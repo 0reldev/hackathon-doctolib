@@ -1,4 +1,4 @@
-@import "style.css";
+
 
 .pillBoxButton {
     background-color: gold;
@@ -15,18 +15,37 @@ main{
 
 a.waves-effect {
     margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
-.topnav{
+.sous-titre{
+    text-align: left;
+}
+
+div.pillboxD{
+    text-align: center;
+    align-items: center;
+}
+
+nav{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#patient:hover, #active:hover{
     background-color: transparent;
 }
 
-h1.center-align{
-    color: black; !important;
+nav ul a:hover {
+    background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
 
-
+    a.waves-effect{
+        overflow-wrap: anywhere;
+        height: auto;
+        font-size: 1.5rem;
+    }
 
 }
