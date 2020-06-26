@@ -3,6 +3,7 @@
 @import "pill-box-instructions.css";
 @import "pill-box-instructions-finish.css";
 @import "pill-box.css";
+@import "pill-box-detail.css";
 
 * {
     margin: 0;
