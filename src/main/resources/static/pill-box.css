@@ -1,0 +1,32 @@
+@import "style.css";
+
+.pillBoxButton {
+    background-color: gold;
+    border-radius: 25px;
+}
+
+#button {
+    font-size: 2rem;
+}
+
+main{
+    margin-left: 2%;
+}
+
+a.waves-effect {
+    margin-bottom: 2rem;
+}
+
+.topnav{
+    background-color: transparent;
+}
+
+h1.center-align{
+    color: black; !important;
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+}
