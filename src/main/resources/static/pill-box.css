@@ -15,18 +15,24 @@ main{
 
 a.waves-effect {
     margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
-.topnav{
-    background-color: transparent;
+.sous-titre{
+    text-align: left;
 }
 
-h1.center-align{
-    color: black; !important;
+div.pillboxD{
+    text-align: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 768px) {
 
-
+    a.waves-effect{
+        overflow-wrap: anywhere;
+        height: auto;
+        font-size: 1.5rem;
+    }
 
 }

@@ -59,7 +59,12 @@ public class MainController {
     }
 
     @GetMapping("/pill-box")
-    public String getPillBox() { return "pill-box"; }
+    public String getPillBox(Model model) {
+
+        model.addAttribute("drugName", drugRepository.findAllDrugByIdOne());
+
+        return "pill-box";
+    }
 
 
     @GetMapping("/pill-box-details")

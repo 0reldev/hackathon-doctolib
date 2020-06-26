@@ -18,7 +18,7 @@
     <h1 class="center-align black-text">Mon Pilulier</h1>
         <div class="pillboxD">
             <a class="waves-effect waves-light btn-large red" href="/pill-box-details">Cliquez-ici pour voir votre pilulier en détail<i class="fas fa-capsules right"></i></a>
-         <div>
+         <div class="sous-titre">
             <p>Composition de votre pilulier :</p><br>
 <!--            <p>Lundi midi</p>-->
           </div>
@@ -31,22 +31,14 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Allergodil</td>
-                <td>1 Spray par narine quand vous en ressentez le besoin</td>
+            <tr th:each="name : ${drugName}">
+                <td th:text="${name}">Euphitose</td>
+                 <td>2 comprimés chaque soir avant le couché </td>
             </tr>
-            <tr>
-                <td>Bilaska</td>
-                <td>1 Comprimé le matin 1h avant le petit déjeuner ou 2h après (ou au coucher)</td>
-            </tr>
-            <tr>
-                <td>Bricanyl</td>
-                <td>1 inhalation quand vous en ressentez le besoin</td>
-            </tr>
-            <tr>
-                <td>Montelukast</td>
-                <td>1 comprimé le matin</td>
-            </tr>
+          <!--  <tr>
+                <td>Rhinallergie</td>
+                <td>1 comprimé tous les matin </td>
+            </tr>-->
             </tbody>
         </table>
 </main>
