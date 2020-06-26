@@ -64,6 +64,7 @@ public class MainController {
         out.addAttribute("drugs", drugRepository.findAllMorningDrugs());
         out.addAttribute("drugsMidday", drugRepository.findAllMiddayDrugs());
         out.addAttribute("drugsNight", drugRepository.findAllNightDrugs());
+        out.addAttribute("drugsIfNecessary", drugRepository.findAllIfNecessaryDrugs());
 
         return "pill-box-details";
     }
