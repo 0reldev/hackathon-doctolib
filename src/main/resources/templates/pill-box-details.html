@@ -38,7 +38,7 @@
                             <tbody>
                                 <tr th:each="drug : ${drugs}">
                                     <td th:text="${drug.name}"></td>
-                                    <td><img  class="drugPhoto" th:src="${drug.image}"></td>
+                                    <td><img  class="drugPhoto" th:src="|/image/drugs/${drug.image}|"></td>
                                     <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
                                 </tr>
@@ -61,7 +61,7 @@
                             <tbody>
                                 <tr th:each="drug : ${drugsMidday}">
                                     <td th:text="${drug.name}"></td>
-                                    <td><img  class="drugPhoto" th:src="${drug.image}"></td>
+                                    <td><img  class="drugPhoto" th:src="|image/drugs/${drug.image}|"></td>
                                     <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
                                     <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
                                 </tr>
@@ -84,7 +84,7 @@
                             <tbody>
                             <tr th:each="drug : ${drugsNight}">
                                 <td th:text="${drug.name}"></td>
-                                <td><img  class="drugPhoto" th:src="${drug.image}"></td>
+                                <td><img  class="drugPhoto" th:src="|image/drugs/${drug.image}|"></td>
                                 <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
                                 <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
                             </tr>
