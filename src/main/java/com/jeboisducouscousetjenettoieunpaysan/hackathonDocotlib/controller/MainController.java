@@ -1,17 +1,17 @@
 package com.jeboisducouscousetjenettoieunpaysan.hackathonDocotlib.controller;
 
+import com.jeboisducouscousetjenettoieunpaysan.hackathonDocotlib.entity.Composition;
 import com.jeboisducouscousetjenettoieunpaysan.hackathonDocotlib.entity.Drug;
+import com.jeboisducouscousetjenettoieunpaysan.hackathonDocotlib.repository.CompositionRepository;
 import com.jeboisducouscousetjenettoieunpaysan.hackathonDocotlib.repository.DrugRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class MainController {
@@ -19,19 +19,23 @@ public class MainController {
     @Autowired
     private DrugRepository drugRepository;
 
+    @Autowired
+    private CompositionRepository compositionRepository;
+
     @GetMapping("/")
     public String getIndex() { return "index"; }
 
     @GetMapping("/pill-box-instructions")
-    public String getPillboxInstructions(Model model, @RequestParam (defaultValue = "0") String count) {
+    public String getPillboxInstructions(Model model, @RequestParam (defaultValue = "1") String count) {
 
-        List<Drug> drugList = drugRepository.findAll();
-        if (Integer.parseInt(count) > drugList.size() - 1) {
+        count = Long.parseLong(count) < 1 ? "1" : count;
+        Optional<Composition> optionalComposition = compositionRepository.findById(Long.parseLong(count));
+        if (!optionalComposition.isPresent()) {
             return "pill-box-instructions-finish";
         }
-        model.addAttribute("drug", drugList.get(Integer.parseInt(count)));
+        Composition composition = optionalComposition.get();
+        model.addAttribute("composition", composition);
         model.addAttribute("count", count);
-        model.addAttribute("number", Integer.parseInt(count) + 1);
         return "pill-box-instructions";
     }
 

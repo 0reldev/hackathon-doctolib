@@ -10,22 +10,23 @@
 <body>
 <th:block th:include="fragments/header.html :: header"></th:block>
 <main>
-<h1 class="step-title" th:text="|Etape n° ${number}|"></h1>
+<h1 class="step-title" th:text="|Etape n° ${count}|"></h1>
     <div class="container-step">
+        <hr>
         <div class="step">
             <div class="grid-left">
-                <h3 th:text="${drug.name}" class="grid-left-top">La Pilule :</h3>
-                <img th:src="|image/drugs/${drug.image}|" class="grid-left-bottom" src="image/pilule.png" alt="image de pilule">
+                <h3 th:text="${composition.getDrug().getName()}" class="grid-left-top"></h3>
+                <img th:src="|image/drugs/${composition.getDrug().getImage()}|" class="grid-left-bottom" src="image/pilule.png" alt="image de pilule">
             </div>
             <div class="grid-middle">
-                <h3 class="grid-middle-top">Le nombre :</h3>
-                <p class="grid-middle-bottom">3</p>
+                <h3 class="grid-middle-top">Nombre :</h3>
+                <p th:text="${composition.getQuantity()}" class="grid-middle-bottom"></p>
             </div>
             <div class="grid-right">
-                <h3 class="grid-right-top">La case :</h3>
+                <h3 class="grid-right-top">Case :</h3>
                 <div class="grid-right-bottom">
-                    <p>Lundi</p>
-                    <p>Matin</p>
+                    <p th:text="${composition.getDay()}"></p>
+                    <p th:text="${composition.getTimeOfTheDay()}"></p>
                 </div>
             </div>
         </div>
