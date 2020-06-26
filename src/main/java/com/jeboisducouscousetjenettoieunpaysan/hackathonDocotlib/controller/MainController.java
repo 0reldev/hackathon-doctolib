@@ -10,8 +10,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Controller
 public class MainController {
@@ -61,7 +63,13 @@ public class MainController {
     @GetMapping("/pill-box")
     public String getPillBox(Model model) {
 
-        model.addAttribute("drugName", drugRepository.findAllDrugByIdOne());
+        List<Composition> compositionsList = compositionRepository.findAll();
+
+        List<Composition> compositionListFilter = compositionsList.stream()
+                .filter(item-> item.getDay().equals("Vendredi"))
+                .collect(Collectors.toList());
+
+       model.addAttribute("compositions", compositionListFilter);
 
         return "pill-box";
     }
