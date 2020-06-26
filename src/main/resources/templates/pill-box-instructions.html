@@ -10,7 +10,7 @@
 <body>
 <th:block th:include="fragments/header.html :: header"></th:block>
 <main>
-<h1 class="step-title" th:text="|Etape n° ${count}|"></h1>
+<h1 class="step-title" th:text="|Étape n° ${count}|"></h1>
     <div class="container-step">
         <hr>
         <div class="step">
@@ -32,11 +32,11 @@
         </div>
         <div class="form-addMedic">
             <form action="/pill-box-instructions/decrement" method="post">
-                <input class="form-addMedic-button-back" type="submit" name="back" value="Etape précédente">
+                <input class="form-addMedic-button-back" type="submit" name="back" value="Étape précédente">
                 <input type="hidden" th:value="${count}" name="count">
             </form>
             <form action="/pill-box-instructions/increment" method="post">
-                <input class="form-addMedic-button-next" type="submit" name="next" value="Etape suivante">
+                <input class="form-addMedic-button-next" type="submit" name="next" value="Étape suivante">
                 <input type="hidden" th:value="${count}" name="count">
             </form>
         </div>
