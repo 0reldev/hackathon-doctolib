@@ -21,6 +21,13 @@
     align-items: center;
 }
 
+.li-patient {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .topnav-link a {
     text-align: center;
     text-decoration: none;
@@ -47,7 +54,7 @@
 
 /* Animations */
 .topnav-link a:hover {
-    border-bottom: 1px solid #fff;
+    text-decoration: underline;
 }
 
 /*Mobile*/
@@ -88,6 +95,11 @@
 
     .bkg-right {
         display: none;
+    }
+
+    .li-patient {
+        position: static;
+        transform: none;
     }
 }
 /*END TOPNAV*/
