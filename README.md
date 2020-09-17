@@ -18,7 +18,6 @@ The evaluation criteria taken into account by examiners were:
 
 Six subjects were proposed. We chose the sixth one: **free topic**.
 
-
 #### Authors
 
 - [Anne Cariou](https://github.com/AnnCa44)
@@ -33,10 +32,10 @@ Six subjects were proposed. We chose the sixth one: **free topic**.
 
 Two main features were developped:
 - **help to pillbox filling**: a user is helped in its pillbox filling by reading step-by-step personalized instructions. 
-- **display of pillbox content**: a user can display an overview of the current medication in the pillbox
+- **display of pillbox content**: a user can display an overview of the current medication in the pillbox.
 
 This app is thought to be connected with a Doctolib's user account. Medication prescription would be automatically loaded from the Doctolib database
-and the pillbox instructions would adapt regarding to these information. That's the concept, for for this hackathon, a new database has been created
+and the pillbox instructions would adapt regarding to these informations. That's the concept, but for this hackathon, a new database has been created
 from zero for testing this application.
 
 The presented result is a minimum vital product.
@@ -58,13 +57,13 @@ The user can choose between the two features from this home page.
 
 ##### Pillbox filling help function
 
-Step-by-step, explicit instructions are displayed. The user have medication's picutre not to counfound, the pills quantity and the posology.
+Step-by-step, explicit instructions are displayed. The user have medication's picture not to confound, the pills quantity and the posology.
 
 Once that the user filled its pillbox, he can confirm to go ahead to the next step. 
 
 In this example, there are 14 steps.
 
-It's well worth noting that button  and font's size are intentionally big. This is a UX design choice to make the user experience as clear as possible and extremely visible, considering than the average user of this application probably would be old with a potential bad sight and few experience with web applications.
+It's well worth noting that button and font's sizes are intentionally big. This is a UX design choice to make the user experience as clear as possible and extremely visible, considering that the average user of this application would probably be old with a potential bad sight and few experience with web applications.
 
 When the filling is over, a validation message is displayed.
 
@@ -83,7 +82,7 @@ When the filling is over, a validation message is displayed.
 
 ##### Display of a pillbox content
 
-The user can watch a full recap of a filled pillbox. 
+Finaly, the user can watch a full recap of a filled pillbox. 
 
 ![screen capture](https://github.com/0reldev/hackathon-doctolib/blob/dev/sc/screen-capture-desktop-4.png)
 
