@@ -6,6 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PillboxRepository extends JpaRepository<Pillbox, Long> {
-
-
 }

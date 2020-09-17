@@ -33,6 +33,7 @@ public class MainController {
         count = Long.parseLong(count) < 1 ? "1" : count;
         Optional<Composition> optionalComposition = compositionRepository.findById(Long.parseLong(count));
         if (!optionalComposition.isPresent()) {
+
             return "pill-box-instructions-finish";
         }
         Composition composition = optionalComposition.get();
@@ -54,6 +55,7 @@ public class MainController {
 
         int newCount = Integer.parseInt(count);
         if (Integer.parseInt(count) > 0) {
+
             newCount -= 1;
         }
         model.addAttribute("count", String.valueOf(newCount));
@@ -64,16 +66,12 @@ public class MainController {
     public String getPillBox(Model model) {
 
         List<Composition> compositionsList = compositionRepository.findAll();
-
         List<Composition> compositionListFilter = compositionsList.stream()
                 .filter(item-> item.getDay().equals("Vendredi"))
                 .collect(Collectors.toList());
-
-       model.addAttribute("compositions", compositionListFilter);
-
+        model.addAttribute("compositions", compositionListFilter);
         return "pill-box";
     }
-
 
     @GetMapping("/pill-box-details")
     public String getDrugs(Model out) {
@@ -82,7 +80,6 @@ public class MainController {
         out.addAttribute("drugsMidday", drugRepository.findAllMiddayDrugs());
         out.addAttribute("drugsNight", drugRepository.findAllNightDrugs());
         out.addAttribute("drugsIfNecessary", drugRepository.findAllIfNecessaryDrugs());
-
         return "pill-box-details";
     }
 }

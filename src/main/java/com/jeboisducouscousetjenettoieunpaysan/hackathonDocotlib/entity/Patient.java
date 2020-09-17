@@ -14,13 +14,16 @@ public class Patient {
     private Long id;
 
     private String name;
+
     private String firstname;
+
     private String adress;
 
     @Column(name = "postal_code")
     private String postalCode;
 
     private String city;
+
     private Date birthday;
 
     @OneToMany(mappedBy = "patient")

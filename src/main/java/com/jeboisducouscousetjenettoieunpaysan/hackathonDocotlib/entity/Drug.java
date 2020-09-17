@@ -13,6 +13,7 @@ public class Drug {
     private Long id;
 
     private String name;
+
     private String image;
 
     @OneToMany(mappedBy = "drug", cascade = CascadeType.ALL)

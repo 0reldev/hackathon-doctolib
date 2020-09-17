@@ -12,7 +12,9 @@ public class Doctor {
     private Long id;
 
     private String name;
+
     private String specialty;
+
     private String adress;
 
     @Column(name = "postal_code")

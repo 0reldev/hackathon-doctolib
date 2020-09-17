@@ -11,7 +11,9 @@ public class Composition {
     private Long id;
 
     private Integer quantity;
+
     private  String day;
+
     @Column(name = "time_of_the_day")
     private String timeOfTheDay;
 

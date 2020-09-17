@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Accueil</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-</head>
-<body>
-<th:block th:include="fragments/header.html :: header"></th:block>
-<main class="mainIndexBlock">
-    <ul>
-        <li class="menulink">
-            <a class="menuLink" href="/pill-box-instructions">
-            <div class="menuBox">REMPLIR MON PILULIER</div>
-            </a>
-        </li>
-        <li class="menulink">
-            <a class="menuLink" href="/pill-box">
-                <div class="menuBox">CONSULTER MON PILULIER</div>
-            </a>
-        </li>
-    </ul>
-</main>
-<th:block th:include="fragments/footer.html :: footer"></th:block>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Accueil</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <th:block th:include="fragments/header.html :: header"></th:block>
+        <main class="mainIndexBlock">
+            <ul>
+                <li class="menulink">
+                    <a class="menuLink" href="/pill-box-instructions">
+                    <div class="menuBox">REMPLIR MON PILULIER</div>
+                    </a>
+                </li>
+                <li class="menulink">
+                    <a class="menuLink" href="/pill-box">
+                        <div class="menuBox">CONSULTER MON PILULIER</div>
+                    </a>
+                </li>
+            </ul>
+        </main>
+        <th:block th:include="fragments/footer.html :: footer"></th:block>
+    </body>
 </html>

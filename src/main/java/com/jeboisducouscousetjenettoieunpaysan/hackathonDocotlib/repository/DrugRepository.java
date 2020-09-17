@@ -67,13 +67,4 @@ public interface DrugRepository extends JpaRepository<Drug, Long> {
             "AND composition.day = 'Lundi' ",
             nativeQuery = true)
     List<Drug> findAllIfNecessaryDrugs();
-
-    @Query(value = "SELECT drug.name FROM drug " +
-            "LEFT JOIN composition ON composition.id_drug = drug.id " +
-            "LEFT JOIN pillbox ON composition.id_pillbox = pillbox.id " +
-            "WHERE id_patient = 1 " +
-            "GROUP BY id_drug",
-            nativeQuery = true)
-    List<String> findAllDrugByIdOne();
-
 }

@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script crossorigin="anonymous" src="https://kit.fontawesome.com/68562b10c3.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"/>
-    <title>Pilulier</title>
-    <link rel="stylesheet" href="pill-box.css">
-    <link rel="stylesheet" href="/style.css">
-
-</head>
-<body>
-<th:block th:include="fragments/header.html :: header"></th:block>
-<main>
-    <h1 class="center-align black-text">Mon Pilulier</h1>
-        <div class="pillboxD">
-            <a class="waves-effect waves-light btn-large red" href="/pill-box-details">Cliquez ici pour voir votre pilulier en détail<i class="fas fa-capsules right"></i></a>
-         <div class="sous-titre">
-            <p>Composition de votre pilulier d'aujourd'hui :</p><br>
-          </div>
-          </div> 
-            <table class="tablepillbox">
-            <thead>
-            <tr>
-                <th>Médicaments</th>
-                <th>Posologie</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="composition :${compositions}">
-                <td th:text="${composition.getDrug().getName()}"></td>
-                 <td th:text="|${composition.getQuantity()} comprimés le ${composition.getDay()} ${composition.getTimeOfTheDay()}|"></td>
-            </tr>
-            </tbody>
-        </table>
-</main>
-<th:block th:include="fragments/footer.html :: footer"></th:block>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script crossorigin="anonymous" src="https://kit.fontawesome.com/68562b10c3.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"/>
+        <title>Pilulier</title>
+        <link rel="stylesheet" href="pill-box.css">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <th:block th:include="fragments/header.html :: header"></th:block>
+        <main>
+            <h1 class="center-align black-text">Mon Pilulier</h1>
+                <div class="pillboxD">
+                    <a class="waves-effect waves-light btn-large red" href="/pill-box-details">Cliquez ici pour voir votre pilulier en détail<i class="fas fa-capsules right"></i></a>
+                    <div class="sous-titre">
+                        <p>Composition de votre pilulier d'aujourd'hui :</p><br>
+                    </div>
+                </div>
+                <table class="tablepillbox">
+                    <thead>
+                        <tr>
+                            <th>Médicaments</th>
+                            <th>Posologie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="composition :${compositions}">
+                            <td th:text="${composition.getDrug().getName()}"></td>
+                             <td th:text="|${composition.getQuantity()} comprimés le ${composition.getDay()} ${composition.getTimeOfTheDay()}|"></td>
+                        </tr>
+                    </tbody>
+                </table>
+        </main>
+        <th:block th:include="fragments/footer.html :: footer"></th:block>
+    </body>
 </html>

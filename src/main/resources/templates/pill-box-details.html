@@ -1,125 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <title>Détails de mon pilulier</title>
-    <link rel="stylesheet" href="pill-box-detail.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</head>
-<body>
-<th:block th:include="fragments/header.html :: header"></th:block>
-<main>
-    <h1>Mon pilulier en détail</h1>
-    <div class="fullPillBoxDiv">
-
-        <table class="centered">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>MÉDICAMENTS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>MATIN</th>
-                    <td>
-                        <table class="responsive-table highlight">
-                            <thead>
-                                <tr>
-                                    <th>nom</th>
-                                    <th>photo</th>
-                                    <th>quantité</th>
-                                    <th>pris ou pas pris ?</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr th:each="drug : ${drugs}">
-                                    <td th:text="${drug.name}"></td>
-                                    <td><img  class="drugPhoto" th:src="|/image/drugs/${drug.image}|"></td>
-                                    <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <th>MIDI</th>
-                    <td>
-                        <table class="responsive-table highlight">
-                            <thead>
-                                <tr>
-                                    <th>nom</th>
-                                    <th>photo</th>
-                                    <th>quantité</th>
-                                    <th>pris ou pas pris ?</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr th:each="drug : ${drugsMidday}">
-                                    <td th:text="${drug.name}"></td>
-                                    <td><img  class="drugPhoto" th:src="|image/drugs/${drug.image}|"></td>
-                                    <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
-                                </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <th>SOIR</th>
-                    <td>
-                        <table class="responsive-table highlight">
-                            <thead>
-                            <tr>
-                                <th>nom</th>
-                                <th>photo</th>
-                                <th>quantité</th>
-                                <th>pris ou pas pris ?</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr th:each="drug : ${drugsNight}">
-                                <td th:text="${drug.name}"></td>
-                                <td><img  class="drugPhoto" th:src="|image/drugs/${drug.image}|"></td>
-                                <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
-                                <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
-                            </tr>
-                            </tbody>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <th>SI BESOIN</th>
-                    <td>
-                        <table class="responsive-table highlight">
-                           <thead>
-                                 <tr>
-                                      <th>nom</th>
-                                      <th>photo</th>
-                                       <th>quantité</th>
-                                       <th>pris ou pas pris ?</th>
-                                 </tr>
-                           </thead>
-                           <tbody>
-                                <tr th:each="drug : ${drugsIfNecessary}">
-                                    <td th:text="${drug.name}"></td>
-                                    <td><img  class="drugPhoto" th:src="${drug.image}"></td>
-                                    <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
-                                    <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
-                                </tr>
-                           </tbody>
-                        </table>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</main>
-<th:block th:include="fragments/footer.html :: footer"></th:block>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+        <title>Détails de mon pilulier</title>
+        <link rel="stylesheet" href="pill-box-detail.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <th:block th:include="fragments/header.html :: header"></th:block>
+        <main>
+            <h1>Mon pilulier en détail</h1>
+            <div class="fullPillBoxDiv">
+                <table class="centered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>MÉDICAMENTS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>MATIN</th>
+                            <td>
+                                <table class="responsive-table highlight">
+                                    <thead>
+                                        <tr>
+                                            <th>nom</th>
+                                            <th>photo</th>
+                                            <th>quantité</th>
+                                            <th>pris ou pas pris ?</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="drug : ${drugs}">
+                                            <td th:text="${drug.name}"></td>
+                                            <td><img  class="drugPhoto" th:src="|/image/drugs/${drug.image}|"></td>
+                                            <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
+                                            <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>MIDI</th>
+                            <td>
+                                <table class="responsive-table highlight">
+                                    <thead>
+                                        <tr>
+                                            <th>nom</th>
+                                            <th>photo</th>
+                                            <th>quantité</th>
+                                            <th>pris ou pas pris ?</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="drug : ${drugsMidday}">
+                                            <td th:text="${drug.name}"></td>
+                                            <td><img  class="drugPhoto" th:src="|image/drugs/${drug.image}|"></td>
+                                            <td>2 x 1000 mg</td> <!-- TODO: make it dynamic with Hibernate -->
+                                            <td>oui</td> <!-- TODO: make it dynamic with Hibernate -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>SOIR</th>
+                            <td>
+                                <table class="responsive-table highlight">
+                                    <thead>
+                                    <tr>
+                                        <th>nom</th>
+                                        <th>photo</th>
+                                        <th>quantité</th>
+                                        <th>pris ou pas pris ?</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="drug : ${drugsNight}">
+                                        <td th:text="${drug.name}"></td>
+                                        <td><img  class="drugPhoto" th:src="|image/drugs/${drug.image}|"></td>
+                                        <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
+                                        <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>SI BESOIN</th>
+                            <td>
+                                <table class="responsive-table highlight">
+                                   <thead>
+                                         <tr>
+                                              <th>nom</th>
+                                              <th>photo</th>
+                                               <th>quantité</th>
+                                               <th>pris ou pas pris ?</th>
+                                         </tr>
+                                   </thead>
+                                   <tbody>
+                                        <tr th:each="drug : ${drugsIfNecessary}">
+                                            <td th:text="${drug.name}"></td>
+                                            <td><img  class="drugPhoto" th:src="${drug.image}"></td>
+                                            <td>4</td> <!-- TODO: make it dynamic with Hibernate -->
+                                            <td>non</td> <!-- TODO: make it dynamic with Hibernate -->
+                                        </tr>
+                                   </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <th:block th:include="fragments/footer.html :: footer"></th:block>
+    </body>
 </html>
